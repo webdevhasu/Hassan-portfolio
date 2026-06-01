@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hassan Wali Web Developer | AI & Full-Stack Engineer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <meta name="description" content="Looking for Hassan Wali Web Developer? Hassan is an AI-powered full-stack web developer in Pakistan specializing in Next.js, intelligent web apps, and digital solutions.">
+  <meta name="keywords" content="Hassan Wali Web Developer, Hassan Wali, Web Developer in Pakistan, AI Developer, Full-Stack Developer, Next.js Developer">
+  <meta name="author" content="Hassan Wali">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href="https://hassanwali.com/">
+
+  <!-- Geo SEO for Pakistan -->
+  <meta name="geo.region" content="PK">
+  <meta name="geo.placename" content="Pakistan">
+  <meta name="geo.position" content="30.3753;69.3451">
+  <meta name="ICBM" content="30.3753, 69.3451">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hassanwali.com/">
+  <meta property="og:title" content="Hassan Wali Web Developer | AI-Powered Full-Stack Engineer">
+  <meta property="og:description" content="Building intelligent, scalable digital solutions powered by AI.">
+  <meta property="og:image" content="https://hassanwali.com/profile.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hassanwali.com/">
+  <meta property="twitter:title" content="Hassan Wali Web Developer | AI-Powered Full-Stack Engineer">
+  <meta property="twitter:description" content="Building intelligent, scalable digital solutions powered by AI.">
+  <meta property="twitter:image" content="https://hassanwali.com/profile.png">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hassan Wali",
+    "url": "https://hassanwali.com",
+    "image": "https://hassanwali.com/profile.png",
+    "jobTitle": "Full-Stack Developer & AI Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/hassanghss7",
+      "https://github.com/hassanghss7",
+      "https://www.facebook.com/hassanghss7",
+      "https://www.instagram.com/hassanghss7"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PK"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">HW</div>
+      <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>HW<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="hero" class="hero">
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <i class="fas fa-robot"></i> AI-First Developer
+      </div>
+      <h1 class="hero-title reveal">
+        Hi, I'm <span class="accent">Hassan Wali</span>
+      </h1>
+      <div class="hero-subtitle reveal">
+        <span class="typing-prefix">I'm a </span>
+        <span class="typing-text" id="typingText"></span>
+        <span class="typing-cursor">|</span>
+      </div>
+      <p class="hero-description reveal">
+        I build intelligent, scalable digital products — from AI-powered apps to 
+        full-stack platforms. Every line of code is a step toward the future.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Let's Talk
+        </a>
+        <a href="#projects" class="btn btn-outline">
+          <i class="fas fa-briefcase"></i> View Work
+        </a>
+        <a href="resume.html" target="_blank" class="btn btn-outline">
+          <i class="fas fa-file-lines"></i> View Resume
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-number" data-count="30">0</span>+
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="15">0</span>+
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="3">0</span>+
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about" class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+        <h2 class="section-title">Turning <span class="accent">AI Vision</span> Into Reality</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="image-frame">
+            <img src="profile.png" alt="Hassan Wali" class="profile-img">
+            <div class="image-border"></div>
+          </div>
+          <div class="about-experience-badge">
+            <span class="exp-number">3+</span>
+            <span class="exp-text">Years of<br>Experience</span>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <h3>Full-Stack Web Developer & AI Engineer</h3>
+          <p>
+            I'm Hassan Wali — a professional <strong>web developer</strong> who lives at the intersection of 
+            <strong>AI and modern web development</strong>. I don't just write code; I engineer 
+            intelligent systems that think, adapt, and deliver results.
+          </p>
+          <p>
+            From crafting pixel-perfect frontends to architecting secure backend infrastructures 
+            with AI integration, I bring every project to life with precision and creativity. 
+            I specialize in building production-ready applications using <strong>Next.js, Neon 
+            databases, and cloud services</strong> — all supercharged with AI capabilities.
+          </p>
+          <p>
+            Whether it's an AI-powered SaaS product, a client's business website, or a complex 
+            mobile application — I deliver end-to-end solutions that are scalable, secure, and 
+            built for the future. My approach? <strong>Vibe code meets hand-crafted excellence.</strong>
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-envelope"></i>
+              <span>webdevhasu@gmail.com</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-phone"></i>
+              <span>+92 347 405 4450</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Pakistan</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-circle-check"></i>
+              <span>Available for Freelance</span>
+            </div>
+          </div>
+          <div class="about-cta">
+            <a href="resume.html" target="_blank" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <div class="about-socials">
+              <a href="https://www.linkedin.com/in/hassanghss7" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/webdevhasu" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.facebook.com/hassanghss7" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/hassanghss7" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS SECTION ============ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fas fa-code"></i> Skills & Tools</span>
+        <h2 class="section-title">My <span class="accent">Tech Arsenal</span></h2>
+        <p class="section-desc">Technologies I use to bring ideas to life</p>
+      </div>
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category reveal">
+          <h3 class="skill-category-title"><i class="fas fa-palette"></i> Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-tooltip="Next.js">
+              <div class="skill-icon"><i class="fas fa-arrow-right-to-bracket"></i></div>
+              <span>Next.js</span>
+            </div>
+            <div class="skill-item" data-tooltip="React">
+              <div class="skill-icon"><i class="fab fa-react"></i></div>
+              <span>React</span>
+            </div>
+            <div class="skill-item" data-tooltip="JavaScript">
+              <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item" data-tooltip="TypeScript">
+              <div class="skill-icon"><i class="fas fa-code"></i></div>
+              <span>TypeScript</span>
+            </div>
+            <div class="skill-item" data-tooltip="HTML5">
+              <div class="skill-icon"><i class="fab fa-html5"></i></div>
+              <span>HTML5</span>
+            </div>
+            <div class="skill-item" data-tooltip="CSS3">
+              <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+              <span>CSS3</span>
+            </div>
+            <div class="skill-item" data-tooltip="Tailwind CSS">
+              <div class="skill-icon"><i class="fas fa-wind"></i></div>
+              <span>Tailwind</span>
+            </div>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-category reveal">
+          <h3 class="skill-category-title"><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-tooltip="Node.js">
+              <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+              <span>Node.js</span>
+            </div>
+            <div class="skill-item" data-tooltip="Python">
+              <div class="skill-icon"><i class="fab fa-python"></i></div>
+              <span>Python</span>
+            </div>
+            <div class="skill-item" data-tooltip="REST APIs">
+              <div class="skill-icon"><i class="fas fa-plug"></i></div>
+              <span>REST APIs</span>
+            </div>
+            <div class="skill-item" data-tooltip="GraphQL">
+              <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+              <span>GraphQL</span>
+            </div>
+          </div>
+        </div>
+        <!-- Database -->
+        <div class="skill-category reveal">
+          <h3 class="skill-category-title"><i class="fas fa-database"></i> Database & Cloud</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-tooltip="Neon">
+              <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+              <span>Neon</span>
+            </div>
+            <div class="skill-item" data-tooltip="PostgreSQL">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="skill-item" data-tooltip="MongoDB">
+              <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+              <span>MongoDB</span>
+            </div>
+            <div class="skill-item" data-tooltip="Firebase">
+              <div class="skill-icon"><i class="fas fa-fire"></i></div>
+              <span>Firebase</span>
+            </div>
+            <div class="skill-item" data-tooltip="Cloudinary">
+              <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+              <span>Cloudinary</span>
+            </div>
+          </div>
+        </div>
+        <!-- Tools & AI -->
+        <div class="skill-category reveal">
+          <h3 class="skill-category-title"><i class="fas fa-robot"></i> AI & Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-tooltip="OpenAI API">
+              <div class="skill-icon"><i class="fas fa-brain"></i></div>
+              <span>OpenAI</span>
+            </div>
+            <div class="skill-item" data-tooltip="AI Automation">
+              <div class="skill-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+              <span>AI Tools</span>
+            </div>
+            <div class="skill-item" data-tooltip="Git">
+              <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+              <span>Git</span>
+            </div>
+            <div class="skill-item" data-tooltip="Vercel">
+              <div class="skill-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+              <span>Vercel</span>
+            </div>
+            <div class="skill-item" data-tooltip="Figma">
+              <div class="skill-icon"><i class="fab fa-figma"></i></div>
+              <span>Figma</span>
+            </div>
+            <div class="skill-item" data-tooltip="Docker">
+              <div class="skill-icon"><i class="fab fa-docker"></i></div>
+              <span>Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES SECTION ============ -->
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fas fa-briefcase"></i> Services</span>
+        <h2 class="section-title">What I <span class="accent">Offer</span></h2>
+        <p class="section-desc">End-to-end digital solutions powered by cutting-edge technology</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" id="service-ai">
+          <div class="service-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="service-number">01</div>
+          <h3>AI-Powered Development</h3>
+          <p>Building intelligent applications that leverage AI for automation, content generation, data analysis, and smart user experiences.</p>
+          <ul class="service-features">
+            <li>AI Chatbots & Assistants</li>
+            <li>Content Generation Tools</li>
+            <li>Smart Automation Systems</li>
+          </ul>
+        </div>
+        <div class="service-card reveal" id="service-web">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="service-number">02</div>
+          <h3>Full-Stack Web Development</h3>
+          <p>End-to-end web solutions from responsive frontends to robust backend systems, deployed and optimized for production.</p>
+          <ul class="service-features">
+            <li>Custom Web Applications</li>
+            <li>E-Commerce Platforms</li>
+            <li>SaaS Products</li>
+          </ul>
+        </div>
+        <div class="service-card reveal" id="service-mobile">
+          <div class="service-icon">
+            <i class="fas fa-mobile-screen-button"></i>
+          </div>
+          <div class="service-number">03</div>
+          <h3>Mobile App Development</h3>
+          <p>Cross-platform mobile applications that deliver native-like experiences with modern frameworks and best practices.</p>
+          <ul class="service-features">
+            <li>React Native Apps</li>
+            <li>Admin Panels & Dashboards</li>
+            <li>Real-time Applications</li>
+          </ul>
+        </div>
+        <div class="service-card reveal" id="service-db">
+          <div class="service-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div class="service-number">04</div>
+          <h3>Database & Security</h3>
+          <p>Designing secure, scalable database architectures with optimized queries, data integrity, and enterprise-grade security.</p>
+          <ul class="service-features">
+            <li>Database Design & Optimization</li>
+            <li>Authentication Systems</li>
+            <li>Data Encryption & Protection</li>
+          </ul>
+        </div>
+        <div class="service-card reveal" id="service-design">
+          <div class="service-icon">
+            <i class="fas fa-pen-ruler"></i>
+          </div>
+          <div class="service-number">05</div>
+          <h3>UI/UX Design</h3>
+          <p>Crafting modern, intuitive interfaces that users love. From wireframes to pixel-perfect designs that convert visitors to customers.</p>
+          <ul class="service-features">
+            <li>Modern UI Design</li>
+            <li>Responsive Layouts</li>
+            <li>Brand Identity</li>
+          </ul>
+        </div>
+        <div class="service-card reveal" id="service-api">
+          <div class="service-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <div class="service-number">06</div>
+          <h3>API Development</h3>
+          <p>Building robust, well-documented APIs that power modern applications. RESTful and GraphQL APIs with authentication and rate limiting.</p>
+          <ul class="service-features">
+            <li>RESTful API Design</li>
+            <li>Third-Party Integrations</li>
+            <li>Payment Gateway Setup</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS SECTION ============ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fas fa-folder-open"></i> Portfolio</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="section-desc">A selection of my recent work across web, mobile, and AI</p>
+      </div>
+
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="ai">AI Powered</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: AI CV Builder -->
+        <div class="project-card reveal" data-category="ai web" id="project-cv">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg, #1e3a5f, #0ea5e9);">
+              <i class="fas fa-file-lines"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">AI Powered</div>
+            <h3>AI CV Builder</h3>
+            <p>AI-powered resume generator that creates professional, ATS-friendly CVs with smart content suggestions, custom templates, and instant PDF export.</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>OpenAI</span>
+              <span>Neon</span>
+              <span>Cloudinary</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Bannu Masala -->
+        <div class="project-card reveal" data-category="web" id="project-masala">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg, #7c2d12, #ea580c);">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://bannumasala.vercel.app" target="_blank" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Web App</div>
+            <h3>Bannu Masala</h3>
+            <p>Premium business website for a spice brand featuring product showcase, online ordering, and a visually rich brand experience.</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>Neon</span>
+              <span>Vercel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: NorthLinks Broadband -->
+        <div class="project-card reveal" data-category="web" id="project-northlinks">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg, #064e3b, #10b981);">
+              <i class="fas fa-wifi"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://northlinksbroadband.vercel.app" target="_blank" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Web App</div>
+            <h3>NorthLinks Broadband</h3>
+            <p>Corporate website for an ISP provider featuring service plans, coverage maps, customer portal integration, and responsive design.</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>Responsive</span>
+              <span>Vercel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Cricket Scorer Pro -->
+        <div class="project-card reveal" data-category="mobile web" id="project-cricket">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg, #1e1b4b, #7c3aed);">
+              <i class="fas fa-baseball-bat-ball"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Mobile App</div>
+            <h3>Cricket Scorer Pro</h3>
+            <p>Real-time cricket scoring application with live match tracking, player statistics, scorecard generation, and admin panel for tournament management.</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>Real-time</span>
+              <span>Neon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Consistency Tracker -->
+        <div class="project-card reveal" data-category="mobile" id="project-tracker">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg, #134e4a, #14b8a6);">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">Mobile App</div>
+            <h3>Consistency Tracker</h3>
+            <p>Habit tracking application with streak counting, daily goal setting, progress analytics, and motivational reminders to keep users on track.</p>
+            <div class="project-tech">
+              <span>React Native</span>
+              <span>Firebase</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: AI Dashboard Studio -->
+        <div class="project-card reveal" data-category="ai web" id="project-dashboard">
+          <div class="project-image">
+            <div class="project-placeholder" style="background: linear-gradient(135deg, #172554, #3b82f6);">
+              <i class="fas fa-gauge-high"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-category">AI Powered</div>
+            <h3>AI Dashboard Studio</h3>
+            <p>Intelligent admin panel system with AI-driven analytics, automated reporting, role-based access control, and dynamic data visualization.</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>PostgreSQL</span>
+              <span>Chart.js</span>
+              <span>OpenAI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS SECTION ============ -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fas fa-quote-left"></i> Testimonials</span>
+        <h2 class="section-title">What <span class="accent">Clients Say</span></h2>
+        <p class="section-desc">Trusted by businesses and startups across the globe</p>
+      </div>
+      <div class="testimonials-slider reveal">
+        <div class="testimonial-track" id="testimonialTrack">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Hassan built our entire website from scratch and exceeded every expectation. 
+              His understanding of both design and functionality is remarkable. The site loads 
+              fast, looks incredible, and our online orders increased by 40%!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AK</div>
+              <div class="author-info">
+                <h4>Ahmed Khan</h4>
+                <span>CEO, Bannu Masala</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Professional, fast, and incredibly talented. Hassan delivered a corporate website 
+              that perfectly represents our brand. The responsive design works flawlessly across 
+              all devices. Highly recommended for any web project!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">FA</div>
+              <div class="author-info">
+                <h4>Farhan Ali</h4>
+                <span>Director, NorthLinks Broadband</span>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The AI CV Builder Hassan developed is a game-changer. It uses AI intelligently 
+              without overcomplicating things. He understands both the technical and business 
+              side of product development. An absolute pleasure to work with."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SM</div>
+              <div class="author-info">
+                <h4>Sarah Mitchell</h4>
+                <span>Startup Founder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-nav">
+          <button class="test-nav-btn" id="testPrev"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonial-dots" id="testimonialDots"></div>
+          <button class="test-nav-btn" id="testNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+        <h2 class="section-title">Let's <span class="accent">Work Together</span></h2>
+        <p class="section-desc">Have a project in mind? Let's bring it to life.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <h4>Email</h4>
+            <a href="mailto:webdevhasu@gmail.com">webdevhasu@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fab fa-whatsapp"></i></div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/923474054450" target="_blank">+92 347 405 4450</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Location</h4>
+            <span>Pakistan</span>
+          </div>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/hassanghss7" target="_blank" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/webdevhasu" target="_blank" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/hassanghss7" target="_blank" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/hassanghss7" target="_blank" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="formName">Your Name</label>
+              <input type="text" id="formName" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="formEmail">Your Email</label>
+              <input type="email" id="formEmail" name="email" placeholder="john@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="formSubject">Subject</label>
+            <input type="text" id="formSubject" name="subject" placeholder="Project Inquiry" required>
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Message</label>
+            <textarea id="formMessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="formSubmit">
+            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+          </button>
+          <p class="form-note">Your message will be sent directly to my WhatsApp for the fastest response.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>HW<span class="logo-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-text">Building the future, one intelligent line of code at a time.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/hassanghss7" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/webdevhasu" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.facebook.com/hassanghss7" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/hassanghss7" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:webdevhasu@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-copy">&copy; 2026 Hassan Wali. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FAB ============ -->
+  <a href="https://wa.me/923474054450" target="_blank" class="whatsapp-fab" id="whatsappFab" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="fab-tooltip">Chat with me!</span>
+  </a>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

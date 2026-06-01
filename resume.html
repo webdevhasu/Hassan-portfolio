@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hassan Wali — Resume / CV</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --accent: #3b82f6;
+      --dark: #111;
+      --gray: #555;
+      --light-gray: #888;
+      --border: #e0e0e0;
+      --bg: #fff;
+    }
+
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .no-print { display: none !important; }
+      .resume { box-shadow: none; max-width: 100%; }
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f0f0;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .print-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--dark);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      z-index: 100;
+    }
+    .print-bar button {
+      padding: 8px 24px;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .print-btn {
+      background: var(--accent);
+      color: white;
+    }
+    .print-btn:hover { background: #2563eb; }
+    .back-btn {
+      background: #333;
+      color: white;
+    }
+    .back-btn:hover { background: #555; }
+
+    .resume {
+      max-width: 800px;
+      margin: 72px auto 40px;
+      background: var(--bg);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Header */
+    .cv-header {
+      background: var(--dark);
+      color: white;
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .cv-name {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .cv-title {
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .cv-contact {
+      text-align: right;
+      font-size: 0.8rem;
+      line-height: 2;
+      color: #ccc;
+    }
+    .cv-contact a { color: #ccc; text-decoration: none; }
+    .cv-contact a:hover { color: var(--accent); }
+    .cv-contact i {
+      color: var(--accent);
+      width: 16px;
+      margin-right: 6px;
+    }
+
+    /* Body */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 0;
+    }
+    .cv-main { padding: 36px 40px; }
+    .cv-sidebar {
+      padding: 36px 28px;
+      background: #f8f9fa;
+      border-left: 1px solid var(--border);
+    }
+
+    .cv-section { margin-bottom: 28px; }
+    .cv-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    .cv-item { margin-bottom: 20px; }
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .cv-item h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .cv-item .cv-date {
+      font-size: 0.75rem;
+      color: var(--light-gray);
+      font-weight: 500;
+    }
+    .cv-item .cv-company {
+      font-size: 0.8rem;
+      color: var(--gray);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .cv-item ul {
+      padding-left: 16px;
+    }
+    .cv-item li {
+      font-size: 0.82rem;
+      color: var(--gray);
+      margin-bottom: 3px;
+      line-height: 1.5;
+    }
+
+    /* Sidebar elements */
+    .cv-skill-group { margin-bottom: 16px; }
+    .cv-skill-group h4 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+    .cv-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .cv-tag {
+      padding: 3px 8px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.7rem;
+      color: var(--gray);
+    }
+
+    .cv-language {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+    }
+    .cv-language span:last-child { color: var(--light-gray); }
+
+    .cv-summary {
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .cv-header { flex-direction: column; text-align: center; padding: 28px 20px; }
+      .cv-contact { text-align: center; }
+      .cv-body { grid-template-columns: 1fr; }
+      .cv-sidebar { border-left: none; border-top: 1px solid var(--border); }
+      .cv-main { padding: 24px 20px; }
+      .cv-sidebar { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-bar no-print">
+    <button class="back-btn" onclick="window.location.href='index.html'">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </button>
+    <button class="print-btn" onclick="window.print()">
+      <i class="fas fa-download"></i> Download / Print PDF
+    </button>
+  </div>
+
+  <div class="resume">
+    <header class="cv-header">
+      <div>
+        <h1 class="cv-name">Hassan Wali</h1>
+        <div class="cv-title">AI-Powered Full-Stack Developer</div>
+      </div>
+      <div class="cv-contact">
+        <div><i class="fas fa-envelope"></i> webdevhasu@gmail.com</div>
+        <div><i class="fas fa-phone"></i> +92 347 405 4450</div>
+        <div><i class="fab fa-linkedin-in"></i> <a href="https://linkedin.com/in/hassanghss7" target="_blank">linkedin.com/in/hassanghss7</a></div>
+        <div><i class="fab fa-github"></i> <a href="https://github.com/webdevhasu" target="_blank">github.com/webdevhasu</a></div>
+        <div><i class="fas fa-map-marker-alt"></i> Pakistan</div>
+      </div>
+    </header>
+
+    <div class="cv-body">
+      <main class="cv-main">
+        <!-- Summary -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Professional Summary</h2>
+          <p class="cv-summary">
+            Results-driven Full-Stack Developer with 3+ years of experience building AI-powered web applications, 
+            scalable mobile apps, and secure backend systems. Specialized in Next.js, Neon, and modern cloud 
+            infrastructure. Proven track record of delivering 30+ projects for clients across e-commerce, SaaS, 
+            and enterprise domains. Passionate about leveraging AI to create intelligent, production-ready digital solutions.
+          </p>
+        </section>
+
+        <!-- Experience -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Experience</h2>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <h3>Freelance Full-Stack Developer</h3>
+              <span class="cv-date">2022 — Present</span>
+            </div>
+            <div class="cv-company">Self-Employed · Remote</div>
+            <ul>
+              <li>Delivered 30+ web and mobile projects for clients across multiple industries</li>
+              <li>Built AI-powered SaaS products including an AI CV Builder with smart content generation</li>
+              <li>Developed client websites (Bannu Masala, NorthLinks Broadband) resulting in 40%+ traffic increase</li>
+              <li>Architected secure database solutions using Neon/PostgreSQL with role-based access control</li>
+              <li>Implemented end-to-end CI/CD pipelines with Vercel for seamless deployments</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Key Projects</h2>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <h3>AI CV Builder</h3>
+              <span class="cv-date">2024</span>
+            </div>
+            <ul>
+              <li>AI-powered resume generator with OpenAI integration for smart content suggestions</li>
+              <li>Built with Next.js, Neon DB, and Cloudinary for image/media handling</li>
+              <li>Features ATS-friendly templates and instant PDF export functionality</li>
+            </ul>
+          </div>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <h3>Bannu Masala — Client Website</h3>
+              <span class="cv-date">2024</span>
+            </div>
+            <ul>
+              <li>E-commerce website for a spice brand with product showcase and online ordering</li>
+              <li>Responsive design optimized for mobile-first experience</li>
+            </ul>
+          </div>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <h3>NorthLinks Broadband — Client Website</h3>
+              <span class="cv-date">2024</span>
+            </div>
+            <ul>
+              <li>Corporate ISP website featuring service plans, coverage maps, and customer portal</li>
+              <li>SEO-optimized Next.js application deployed on Vercel</li>
+            </ul>
+          </div>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <h3>Cricket Scorer Pro & Mobile Apps</h3>
+              <span class="cv-date">2023 — 2024</span>
+            </div>
+            <ul>
+              <li>Live cricket scoring app with real-time updates and admin panel</li>
+              <li>Consistency Tracker habit app with streak tracking and analytics</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Education</h2>
+          <div class="cv-item">
+            <div class="cv-item-header">
+              <h3>Self-Taught & Certified Developer</h3>
+              <span class="cv-date">2021 — Present</span>
+            </div>
+            <ul>
+              <li>Continuous learning through online platforms, AI tools, and hands-on project experience</li>
+              <li>Focused certifications in Full-Stack Development, AI/ML, and Cloud Computing</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <aside class="cv-sidebar">
+        <!-- Skills -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Skills</h2>
+          <div class="cv-skill-group">
+            <h4>Frontend</h4>
+            <div class="cv-tags">
+              <span class="cv-tag">Next.js</span>
+              <span class="cv-tag">React</span>
+              <span class="cv-tag">TypeScript</span>
+              <span class="cv-tag">JavaScript</span>
+              <span class="cv-tag">Tailwind CSS</span>
+              <span class="cv-tag">HTML/CSS</span>
+            </div>
+          </div>
+          <div class="cv-skill-group">
+            <h4>Backend</h4>
+            <div class="cv-tags">
+              <span class="cv-tag">Node.js</span>
+              <span class="cv-tag">Python</span>
+              <span class="cv-tag">REST APIs</span>
+              <span class="cv-tag">GraphQL</span>
+            </div>
+          </div>
+          <div class="cv-skill-group">
+            <h4>Database</h4>
+            <div class="cv-tags">
+              <span class="cv-tag">Neon</span>
+              <span class="cv-tag">PostgreSQL</span>
+              <span class="cv-tag">MongoDB</span>
+              <span class="cv-tag">Firebase</span>
+            </div>
+          </div>
+          <div class="cv-skill-group">
+            <h4>AI & Cloud</h4>
+            <div class="cv-tags">
+              <span class="cv-tag">OpenAI</span>
+              <span class="cv-tag">Cloudinary</span>
+              <span class="cv-tag">Vercel</span>
+              <span class="cv-tag">Docker</span>
+              <span class="cv-tag">Git</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tools -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Tools</h2>
+          <div class="cv-tags">
+            <span class="cv-tag">VS Code</span>
+            <span class="cv-tag">Figma</span>
+            <span class="cv-tag">Cursor</span>
+            <span class="cv-tag">GitHub</span>
+            <span class="cv-tag">Postman</span>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Languages</h2>
+          <div class="cv-language"><span>Urdu</span><span>Native</span></div>
+          <div class="cv-language"><span>Pashto</span><span>Native</span></div>
+          <div class="cv-language"><span>English</span><span>Professional</span></div>
+        </section>
+
+        <!-- Interests -->
+        <section class="cv-section">
+          <h2 class="cv-section-title">Interests</h2>
+          <div class="cv-tags">
+            <span class="cv-tag">AI Research</span>
+            <span class="cv-tag">Open Source</span>
+            <span class="cv-tag">Cricket</span>
+            <span class="cv-tag">Tech Community</span>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
