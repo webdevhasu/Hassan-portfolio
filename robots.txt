@@ -1,4 +1,49 @@
+# Hassan Wali Portfolio - robots.txt
+# Website: https://hassanwali.vercel.app/
+
+# Allow all search engine bots
 User-agent: *
 Allow: /
+Disallow: /.git/
 
-Sitemap: https://hassanwali.com/sitemap.xml
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Google Image
+User-agent: Googlebot-Image
+Allow: /profile.png
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap
+Sitemap: https://hassanwali.vercel.app/sitemap.xml
+
+# Host
+Host: https://hassanwali.vercel.app

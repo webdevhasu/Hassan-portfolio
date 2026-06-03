@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
-    <loc>https://hassanwali.com/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://hassanwali.vercel.app/</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hassanwali.vercel.app/profile.png</image:loc>
+      <image:title>Hassan Wali - Web Developer and AI Engineer from Chitral, Pakistan</image:title>
+      <image:caption>Hassan Wali, professional full-stack web developer and AI engineer from Chitral, Pakistan</image:caption>
+      <image:geo_location>Chitral, Pakistan</image:geo_location>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://hassanwali.com/resume.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://hassanwali.vercel.app/resume.html</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>
